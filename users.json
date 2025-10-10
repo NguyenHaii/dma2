@@ -1,0 +1,14 @@
+[
+  {
+    "username": "testuser",
+    "password": "123456",
+    "phone": "+84901234567",
+    "verified": true
+  },
+  {
+    "username": "newuser",
+    "password": "password123",
+    "phone": "+84987654321",
+    "verified": false
+  }
+]
