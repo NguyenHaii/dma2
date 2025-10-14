@@ -1,0 +1,27 @@
+# Node.js dependencies
+node_modules/
+
+# Env files chứa config nhạy cảm
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Thư mục build (nếu có)
+dist/
+build/
+
+# Thư mục tạm và cache
+tmp/
+.cache/
+
+# IDEs, editors
+.vscode/
+.idea/
+
+# MacOS
+.DS_Store

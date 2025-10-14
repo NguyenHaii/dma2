@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Product List</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Danh sách sản phẩm</h1>
+    <ul id="product-list"></ul>
+  </div>
+
+  <script>
+    // Gọi API lấy danh sách sản phẩm
+    fetch('/api/products')
+      .then(res => res.json())
+      .then(data => {
+        const list = document.getElementById('product-list');
+        data.forEach(product => {
+          const li = document.createElement('li');
+          li.innerHTML = `<strong>${product.name}</strong> - ${product.price}₫<br>${product.description}`;
+          list.appendChild(li);
+        });
+      })
+      .catch(err => {
+        console.error('Lỗi:', err);
+      });
+  </script>
+</body>
+</html>
